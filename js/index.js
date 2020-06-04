@@ -58,4 +58,13 @@ let dragRender = (function () {
         }
     }
 })();
-dragRender.init();
+// dragRender.init();
+
+// 自定义属性值只能是字符串
+let dragContainer = document.querySelector('.dragContainer'),
+    draging = dragContainer.getElementsByClassName('draging')
+    ;
+for (let i = 0; i < draging.length; i++) {
+    new Drag(dragContainer, draging[i]);
+        
+}
